@@ -245,6 +245,10 @@ end)
 map('n', '<leader>gc', function()
     vim.fn.VSCodeNotify('giteasy.doCommit')
 end)
+-- create repository
+map('n', '<leader>grp', function()
+    vim.fn.VSCodeNotify('github.publish')
+end)
 
 
 
