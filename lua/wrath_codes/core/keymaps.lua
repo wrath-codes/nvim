@@ -319,6 +319,24 @@ map('n', '<leader>grp', function()
 end)
 
 
+-- NPM Commands
+-- Add Dependency
+map('n', '<leader>ni', function()
+    vim.fn.VSCodeNotify('NpmUtils.install-dependency')
+end)
+-- Add Dev Dependency
+map('n', '<leader>nd', function()
+    vim.fn.VSCodeNotify('NpmUtils.install-dev-dependency')
+end)
+-- Remove Dependency
+map('n', '<leader>nu', function()
+    vim.fn.VSCodeNotify('NpmUtils.remove-dependency')
+end)
+-- Run NPM Script
+map('n', '<leader>nr', function()
+    vim.fn.VSCodeNotify('NpmUtils.run-script')
+end)
+
 
 
 
