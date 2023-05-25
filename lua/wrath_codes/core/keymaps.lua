@@ -242,15 +242,57 @@ map('n', '<leader>gi', function()
     vim.fn.VSCodeNotify('giteasy.doInit')
 end)
 -- Git Commit
-map('n', '<leader>gc', function()
+map('n', '<leader>gcm', function()
     vim.fn.VSCodeNotify('giteasy.doCommit')
 end)
 -- create repository
 map('n', '<leader>grp', function()
     vim.fn.VSCodeNotify('github.publish')
 end)
-
-
+-- Git Push
+map('n', '<leader>gpr', function()
+    vim.fn.VSCodeNotify('giteasy.doRemoteCurrentPush')
+end)
+-- Git Push to Origin
+map('n', '<leader>gpo', function()
+    vim.fn.VSCodeNotify('giteasy.doOriginCurrentPush')
+end)
+-- Git Pull
+map('n', '<leader>gpl', function()
+    vim.fn.VSCodeNotify('giteasy.doOriginCurrentPull')
+end)
+-- Git Create Branch
+map('n', '<leader>gcb', function()
+    vim.fn.VSCodeNotify('giteasy.doCreateBranch')
+end)
+-- Git Checkout/Change Branch
+map('n', '<leader>gco', function()
+    vim.fn.VSCodeNotify('giteasy.doCheckoutBranch')
+end)
+-- Git Checkout File
+map('n', '<leader>gcf', function()
+    vim.fn.VSCodeNotify('giteasy.doCheckoutCurrentFile')
+end)
+-- Git Status
+map('n', '<leader>gs', function()
+    vim.fn.VSCodeNotify('giteasy.doStatus')
+end)
+-- Git Log All
+map('n', '<leader>gla', function()
+    vim.fn.VSCodeNotify('giteasy.doLogAll')
+end)
+-- Git Log Current File
+map('n', '<leader>glc', function()
+    vim.fn.VSCodeNotify('giteasy.doLogCurrentFile')
+end)
+-- Git add Remote
+map('n', '<leader>gar', function()
+    vim.fn.VSCodeNotify('giteasy.doAddRemote')
+end)
+-- Git add Origin
+map('n', '<leader>gao', function()
+    vim.fn.VSCodeNotify('giteasy.doAddOrigin')
+end)
 
 
 
