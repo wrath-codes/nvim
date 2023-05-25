@@ -261,6 +261,14 @@ end)
 map('n', '<leader>gpo', function()
     vim.fn.VSCodeNotify('giteasy.doOriginCurrentPush')
 end)
+-- Git Push 
+map('n', '<leader>gpu', function()
+    vim.fn.VSCodeNotify('git.push')
+end)
+-- Git Push Force
+map('n', '<leader>gpf', function()
+    vim.fn.VSCodeNotify('git.pushForce')
+end)
 -- Git Pull
 map('n', '<leader>gpl', function()
     vim.fn.VSCodeNotify('giteasy.doOriginCurrentPull')
