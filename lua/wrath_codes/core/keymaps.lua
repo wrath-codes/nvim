@@ -238,8 +238,12 @@ map('n', '<leader>guc', function()
     vim.fn.VSCodeNotify('giteasy.doUnstageCurrentFile')
 end)
 -- Git Init
-map('n', '<leader>gi', function()
+map('n', '<leader>gin', function()
     vim.fn.VSCodeNotify('giteasy.doInit')
+end)
+-- Git Ignore
+map('n', '<leader>gig', function()
+    vim.fn.VSCodeNotify('giteasy.doIgnore')
 end)
 -- Git Commit
 map('n', '<leader>gcm', function()
