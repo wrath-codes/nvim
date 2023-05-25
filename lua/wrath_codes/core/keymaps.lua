@@ -239,18 +239,18 @@ map('n', '<leader>guc', function()
 end)
 -- Git Init
 map('n', '<leader>gin', function()
-    vim.fn.VSCodeNotify('giteasy.doInit')
+    vim.fn.VSCodeNotify('git.init')
 end)
 -- Git Ignore
 map('n', '<leader>gig', function()
-    vim.fn.VSCodeNotify('giteasy.doIgnore')
+    vim.fn.VSCodeNotify('git.ignore')
 end)
 -- Git Commit
 map('n', '<leader>gcm', function()
     vim.fn.VSCodeNotify('giteasy.doCommit')
 end)
 -- create repository
-map('n', '<leader>grp', function()
+map('n', '<leader>grc', function()
     vim.fn.VSCodeNotify('github.publish')
 end)
 -- Git Push
@@ -304,6 +304,18 @@ end)
 -- Git add Origin
 map('n', '<leader>gao', function()
     vim.fn.VSCodeNotify('giteasy.doAddOrigin')
+end)
+-- Git Sync Rebase
+map('n', '<leader>grs', function()
+    vim.fn.VSCodeNotify('git.syncRebase')
+end)
+-- Git Rebase
+map('n', '<leader>grb', function()
+    vim.fn.VSCodeNotify('git.rebase')
+end)
+-- Git Rebase Pull
+map('n', '<leader>grp', function()
+    vim.fn.VSCodeNotify('git.pullRebase')
 end)
 
 
