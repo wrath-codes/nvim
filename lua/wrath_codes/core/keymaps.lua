@@ -337,7 +337,15 @@ map('n', '<leader>nr', function()
     vim.fn.VSCodeNotify('NpmUtils.run-script')
 end)
 
-
+-- Terminal Commands
+-- Run In Terminal
+map('n', '<leader>rit', function()
+    vim.fn.VSCodeNotify('runInTerminal.run')
+end)
+-- Run Last Command
+map('n', '<leader>ril', function()
+    vim.fn.VSCodeNotify('runInTerminal.runLast')
+end)
 
 
 
