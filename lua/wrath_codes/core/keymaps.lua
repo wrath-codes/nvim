@@ -1,0 +1,267 @@
+vim.g.mapleader = " "
+
+local opts = {noremap = true, silent = true}
+local map = vim.keymap.set -- for convenience
+
+-- VSCODE KEYBINDINGS
+-- Commands Related to Find
+-- Find Commands (Ctrl+Shift+P)
+map('n', '<leader>fc', function()
+    vim.fn.VSCodeNotify('workbench.action.showCommands')
+end)
+-- Find Project Files (Ctrl+Shift+E)
+map('n', '<leader>fp', function()
+    vim.fn.VSCodeNotify('workbench.action.showAllSymbols')
+end)
+-- Find All Recent Projects (Ctrl+Shift+R)
+map('n', '<leader>fr', function()
+    vim.fn.VSCodeNotify('workbench.action.quickOpenRecent')
+end)
+-- Find Word in Files (Ctrl+Shift+F)
+map('n', '<leader>fw', function()
+    vim.fn.VSCodeNotify('actions.find')
+end)
+-- Find File (Ctrl+P)
+map('n', '<leader>ff', function()
+    vim.fn.VSCodeNotify('workbench.action.quickOpen')
+end)
+-- Find and Replace (Ctrl+H)
+map('n', '<leader>re', function()
+    vim.fn.VSCodeNotify('editor.action.startFindReplaceAction')
+end)
+-- Add Selection to Next Find Match (Ctrl+D)
+map('v', '<leader>fn', function()
+    vim.fn.VSCodeNotify('editor.action.addSelectionToNextFindMatch')
+end)
+
+-- Commands Related to Editors
+-- Next Editor 
+map('n', '<leader>tn', function()
+    vim.fn.VSCodeNotify('workbench.action.nextEditorInGroup')
+end)
+-- Previous Editokr
+map('n', '<leader>tp', function()
+    vim.fn.VSCodeNotify('workbench.action.previousEditorInGroup') 
+end)
+-- Move Editor Left
+map('n', '<leader>tl', function()
+    vim.fn.VSCodeNotify('workbench.action.moveEditorLeftInGroup')
+end)
+-- Move Editor Right
+map('n', '<leader>tr', function()
+    vim.fn.VSCodeNotify('workbench.action.moveEditorRightInGroup')
+end)
+-- Tab Editor
+map('n', '<Tab>', function()
+    vim.fn.VSCodeNotify('workbench.action.nextEditorInGroup')
+end)
+-- Shift Tab Editor
+map('n', '<S-Tab>', function()
+    vim.fn.VSCodeNotify('workbench.action.previousEditorInGroup')
+end)
+-- Close Editor
+map('n', '<leader>wc', function()
+    vim.fn.VSCodeNotify('workbench.action.closeActiveEditor')
+end)
+-- Close Editor Group
+map('n', '<leader>wg', function()
+    vim.fn.VSCodeNotify('workbench.action.closeEditorsInGroup')
+end)
+-- Close All Editors
+map('n', '<leader>wa', function()
+    vim.fn.VSCodeNotify('workbench.action.closeAllEditors')
+end)
+-- Close Other Editors
+map('n', '<leader>wo', function()
+    vim.fn.VSCodeNotify('workbench.action.closeOtherEditors')
+end)
+-- Close Editors to the Left in Group
+map('n', '<leader>wl', function()
+    vim.fn.VSCodeNotify('workbench.action.closeEditorsToTheLeft')
+end)
+-- Close Editors to the Right in Group
+map('n', '<leader>wr', function()
+    vim.fn.VSCodeNotify('workbench.action.closeEditorsToTheRight')
+end)
+
+
+-- Miscellanea
+-- Toggle Zen Mode
+map('n', '<leader>zm', function()
+    vim.fn.VSCodeNotify('workbench.action.toggleZenMode')
+end)
+-- Quick Fix
+map('n', '<leader>.', function()
+    vim.fn.VSCodeNotify('editor.action.quickFix')
+end)
+-- Advance New File
+map('n', '<leader>anf', function()
+    vim.fn.VSCodeNotify('extension.advancedNewFile')
+end)
+-- Close VSCode
+map('n', '<leader>ww', function()
+    vim.fn.VSCodeNotify('workbench.action.closeWindow')
+end)
+-- New Window
+map('n', '<leader>wn', function()
+    vim.fn.VSCodeNotify('workbench.action.newWindow')
+end)
+
+-- command related to toggle
+-- Toggle Activity Bar
+map('n', '<leader>tba', function()
+    vim.fn.VSCodeNotify('workbench.action.toggleActivityBarVisibility')
+end)
+-- Toggle Menu Bar
+map('n', '<leader>tbm', function()
+    vim.fn.VSCodeNotify('workbench.action.toggleMenuBar')
+end)
+-- Toggle Status Bar
+map('n', '<leader>tbs', function()
+    vim.fn.VSCodeNotify('workbench.action.toggleStatusbarVisibility')
+end)
+-- Toggle Full Screen
+map('n', '<leader>tfs', function()
+    vim.fn.VSCodeNotify('workbench.action.toggleFullScreen')
+end)
+-- Toggle Theme Change
+map('n', '<leader>ttc', function()
+    vim.fn.VSCodeNotify('workbench.action.selectTheme')
+end)
+-- Toggle Icon Theme
+map('n', '<leader>tti', function()
+    vim.fn.VSCodeNotify('workbench.action.selectIconTheme')
+end)
+-- Toggle Python Interpreter
+map('n', '<leader>tpi', function()
+    vim.fn.VSCodeNotify('python.setInterpreter')
+end)
+-- Toggle Python Linter
+map('n', '<leader>tpl', function()
+    vim.fn.VSCodeNotify('python.setLinter')
+end)
+-- Toggle fold
+map('', '<leader>tff', function()
+    vim.fn.VSCodeNotify('editor.toggleFold')
+end)
+-- Toggle Github Copilot
+map('n', '<leader>tgc', function()
+    vim.fn.VSCodeNotify('github.copilot.toggleCopilot')
+end)
+
+-- Settings Related Commands
+-- Open Settings (Ctrl+,)
+map('n', '<leader>sai', function()
+    vim.fn.VSCodeNotify('workbench.action.openSettings')
+end)
+-- Open Keyboard Shortcuts (Ctrl+K Ctrl+S)
+map('n', '<leader>ski', function()
+    vim.fn.VSCodeNotify('workbench.action.openGlobalKeybindings')
+end)
+-- Open Keybindings (Ctrl+K Ctrl+K)
+map('n', '<leader>skf', function()
+    vim.fn.VSCodeNotify('workbench.action.openGlobalKeybindingsFile')
+end)
+-- Open Application Settings (Ctrl+K Ctrl+O)
+map('n', '<leader>saf', function()
+    vim.fn.VSCodeNotify('workbench.action.openApplicationSettingsJson')
+end)
+-- Ident Using Spaces
+map('n', '<leader>ius', function()
+    vim.fn.VSCodeNotify('editor.action.indentUsingSpaces')
+end)
+-- Ident Using Tabs
+map('n', '<leader>iut', function()
+    vim.fn.VSCodeNotify('editor.action.indentUsingTabs')
+end)
+-- Format Document
+map('n', '<leader>if', function()
+    vim.fn.VSCodeNotify('editor.action.formatDocument')
+end)
+-- Format Selection
+map('v', '<leader>is', function()
+    vim.fn.VSCodeNotify('editor.action.formatSelection')
+end)
+
+-- Definition and Declaration Related Commands
+-- Show Hover
+map('n', 'gh', function()
+    vim.fn.VSCodeNotify('editor.action.showHover')
+end)
+map('n', 'K', function()
+    vim.fn.VSCodeNotify('editor.action.showHover')
+end)
+-- Go to Definition
+map('n', 'gd', function()
+    vim.fn.VSCodeNotify('editor.action.revealDefinition')
+end)
+-- Go to Definition to the Side
+map('n', 'gs', function()
+    vim.fn.VSCodeNotify('editor.action.revealDefinitionAside')
+end)
+-- Peek Definition
+map('n', 'gD', function()
+    vim.fn.VSCodeNotify('editor.action.peekDefinition')
+end)
+-- Reveal Declaration
+map('n', 'gf', function()
+    vim.fn.VSCodeNotify('editor.action.revealDeclaration')
+end)
+-- Peek Declaration
+map('n', 'gF', function()
+    vim.fn.VSCodeNotify('editor.action.peekDeclaration')
+end)
+-- Reference Search
+map('n', 'gH', function()
+    vim.fn.VSCodeNotify('editor.action.referenceSearch.trigger')
+end)
+-- Go to Symbol in File
+map('n', 'gO', function()
+    vim.fn.VSCodeNotify('workbench.action.gotoSymbol')
+end)
+
+-- Git Commands
+-- Add All Modified Files
+map('n', '<leader>gaa', function()
+    vim.fn.VSCodeNotify('giteasy.doAddAll')
+end)
+-- Add current file
+map('n', '<leader>gac', function()
+    vim.fn.VSCodeNotify('giteasy.doAddCurrentFile')
+end)
+-- Add current Directory
+map('n', '<leader>gad', function()
+    vim.fn.VSCodeNotify('giteasy.doAdd')
+end)
+-- Unstage current file
+map('n', '<leader>guc', function()
+    vim.fn.VSCodeNotify('giteasy.doUnstageCurrentFile')
+end)
+-- Git Init
+map('n', '<leader>gi', function()
+    vim.fn.VSCodeNotify('giteasy.doInit')
+end)
+-- Git Commit
+map('n', '<leader>gc', function()
+    vim.fn.VSCodeNotify('giteasy.doCommit')
+end)
+
+
+
+
+
+
+
+
+ 
+
+-- VIM COMMANDS
+-- Clear search with <esc>
+map({ "i", "n" }, "<Esc>", "<Cmd>noh<CR><Esc>")
+
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+
+-- Move selected line / block of text in visual mode
+map("x", "J", ":move '>+1<CR>gv-gv")
+map("x", "K", ":move '<-2<CR>gv-gv")
