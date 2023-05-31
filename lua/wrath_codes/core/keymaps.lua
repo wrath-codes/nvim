@@ -29,9 +29,9 @@ end)
 map('n', '<leader>re', function()
     vim.fn.VSCodeNotify('editor.action.startFindReplaceAction')
 end)
--- Add Selection to Next Find Match (Ctrl+D)
-map('v', '<leader>fn', function()
-    vim.fn.VSCodeNotify('editor.action.addSelectionToNextFindMatch')
+--  Find Emoji
+map('n', '<leader>fe', function()
+    vim.fn.VSCodeNotify('emoji.insert')
 end)
 
 -- Commands Related to Editors
@@ -337,15 +337,76 @@ map('n', '<leader>nr', function()
     vim.fn.VSCodeNotify('NpmUtils.run-script')
 end)
 
--- Terminal Commands
--- Run In Terminal
-map('n', '<leader>rit', function()
-    vim.fn.VSCodeNotify('runInTerminal.run')
+-- Harpoon Commands
+-- Add Global Mark
+map('n', '<leader>ha', function()
+    vim.fn.VSCodeNotify('vscode-harpoon.addGlobalEditor')
 end)
--- Run Last Command
-map('n', '<leader>ril', function()
-    vim.fn.VSCodeNotify('runInTerminal.runLast')
+-- Mark Quick Switch
+map('n', '<leader>hp', function()
+    vim.fn.VSCodeNotify('vscode-harpoon.editorGlobalQuickPick')
 end)
+-- Edit Global Marks
+map('n', '<leader>he', function()
+    vim.fn.VSCodeNotify('vscode-harpoon.editGlobalEditors')
+end)
+-- Mark 1
+map('n', '<leader>hh', function()
+    vim.fn.VSCodeNotify('vscode-harpoon.gotoGlobalEditor1')
+end)
+-- Mark 2
+map('n', '<leader>ht', function()
+    vim.fn.VSCodeNotify('vscode-harpoon.gotoGlobalEditor2')
+end)
+-- Mark 3
+map('n', '<leader>hn', function()
+    vim.fn.VSCodeNotify('vscode-harpoon.gotoGlobalEditor3')
+end)
+-- Mark 4
+map('n', '<leader>hs', function()
+    vim.fn.VSCodeNotify('vscode-harpoon.gotoGlobalEditor4')
+end)
+
+
+-- File Utils Commands
+-- Copy Name
+map('n', '<leader>fnc', function()
+    vim.fn.VSCodeNotify('fileutils.copyFileName')
+end)
+-- Delete File
+map('n', '<leader>fdd', function()
+    vim.fn.VSCodeNotify('fileutils.removeFile')
+end) 
+-- Duplicate File
+map('n', '<leader>fdu', function()
+    vim.fn.VSCodeNotify('fileutils.duplicateFile')
+end)
+-- Move File
+map('n', '<leader>fmv', function()
+    vim.fn.VSCodeNotify('fileutils.moveFile')
+end)
+-- Rename File
+map('n', '<leader>fnn', function()
+    vim.fn.VSCodeNotify('fileutils.renameFile')
+end)
+-- New File at Current Location
+map('n', '<leader>fnf', function()
+    vim.fn.VSCodeNotify('fileutils.newFile')
+end)
+-- New File at Project Root
+map('n', '<leader>fnF', function()
+    vim.fn.VSCodeNotify('fileutils.newFileAtRoot')
+end)
+-- New Folder at Current Location
+map('n', '<leader>fnd', function()
+    vim.fn.VSCodeNotify('fileutils.newFolder')
+end)
+-- New Folder at Project Root
+map('n', '<leader>fnD', function()
+    vim.fn.VSCodeNotify('fileutils.newFolderAtRoot')
+end)
+
+-- Vim Multiple Cursors
 
 
 
