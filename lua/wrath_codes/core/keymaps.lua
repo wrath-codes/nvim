@@ -249,6 +249,14 @@ end)
 map('n', '<leader>gcm', function()
     vim.fn.VSCodeNotify('giteasy.doCommit')
 end)
+-- Git Commit Emoji
+map('n', '<leader>gce', function()
+    vim.fn.VSCodeNotify('gitmoji.gitmojiCommit')
+end)
+-- Emoji List
+map('n', '<leader>gel', function()
+    vim.fn.VSCodeNotify('gitmoji.emojiList')
+end)
 -- create repository
 map('n', '<leader>grc', function()
     vim.fn.VSCodeNotify('github.publish')
