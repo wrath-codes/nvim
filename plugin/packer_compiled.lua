@@ -80,11 +80,6 @@ _G.packer_plugins = {
     path = "/home/wrath/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/smoka7/hop.nvim"
   },
-  ["mini.move"] = {
-    loaded = true,
-    path = "/home/wrath/.local/share/nvim/site/pack/packer/start/mini.move",
-    url = "https://github.com/echasnovski/mini.move"
-  },
   ["mini.surround"] = {
     loaded = true,
     path = "/home/wrath/.local/share/nvim/site/pack/packer/start/mini.surround",
