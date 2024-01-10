@@ -39,7 +39,7 @@ if vim.g.vscode then
     end)
     -- Find and Replace (Ctrl+H)
     map('n', '<leader>re', function()
-        vim.fn.VSCodeNotify('editor.action.startFindReplaceAction')
+        vim.fn.VSCodeNotify('search.action.replaceAll')
     end)
     --  Find Emoji
     map('n', '<leader>fe', function()
