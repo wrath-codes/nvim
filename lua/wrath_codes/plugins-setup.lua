@@ -43,10 +43,10 @@ return packer.startup(function(use)
   -- commenting
   use("tpope/vim-commentary") -- "gc" to comment visual regions/lines
 
-  -- move lines
-  use 'echasnovski/mini.move'
+  -- move surround
+  use { 'echasnovski/mini.surround', branch = 'stable' }
     
-  -- lightspeed
+  -- hop
   use {
   'smoka7/hop.nvim',
   tag = '*', -- optional but strongly recommended
