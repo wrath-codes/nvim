@@ -314,7 +314,7 @@ map('n', '<leader>gcb', function()
     vim.fn.VSCodeNotify('giteasy.doCreateBranch')
 end)
 -- Git Checkout/Change Branch
-map('n', '<leader>gco', function()
+map('n', '<leader>gcb', function()
     vim.fn.VSCodeNotify('giteasy.doCheckoutBranch')
 end)
 -- Git Checkout File
