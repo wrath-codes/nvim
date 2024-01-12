@@ -57,6 +57,14 @@ end)
 map('n', '<leader>fe', function()
     vim.fn.VSCodeNotify('emoji.insert')
 end)
+-- Find Git Projects
+map('n', '<leader>fgp', function()
+    vim.fn.VSCodeNotify('projectManager.listProjects')
+end)
+-- Refresh Git Projects
+map('n', '<leader>fgr', function()
+    vim.fn.VSCodeNotify('projectManager.refreshGitProjects')
+end)
 
 -- Commands Related to Editors
 -- Next Editor
@@ -432,4 +440,7 @@ end)
 map('n', '<leader>fnD', function()
     vim.fn.VSCodeNotify('fileutils.newFolderAtRoot')
 end)
+
+-- Project Commands
+
 
