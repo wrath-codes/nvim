@@ -353,6 +353,11 @@ end)
 map('n', '<leader>grp', function()
     vim.fn.VSCodeNotify('git.pullRebase')
 end)
+-- Git Rebase Abort
+map('n', '<leader>gra', function()
+    vim.fn.VSCodeNotify('git.rebaseAbort')
+end)
+
 
 
 -- NPM Commands
