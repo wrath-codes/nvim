@@ -246,6 +246,7 @@ end)
 map('n', 'gF', function()
     vim.fn.VSCodeNotify('editor.action.peekDeclaration')
 end)
+
 -- Reference Search
 map('n', 'gH', function()
     vim.fn.VSCodeNotify('editor.action.referenceSearch.trigger')
