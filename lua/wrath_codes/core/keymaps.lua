@@ -289,7 +289,7 @@ end)
 map('n', '<leader>grc', function()
     vim.fn.VSCodeNotify('github.publish')
 end)
--- Git Push
+-- Git Push Remote
 map('n', '<leader>gpr', function()
     vim.fn.VSCodeNotify('giteasy.doRemoteCurrentPush')
 end)
@@ -310,7 +310,7 @@ map('n', '<leader>gpl', function()
     vim.fn.VSCodeNotify('giteasy.doOriginCurrentPull')
 end)
 -- Git Create Branch
-map('n', '<leader>gcb', function()
+map('n', '<leader>gbc', function()
     vim.fn.VSCodeNotify('giteasy.doCreateBranch')
 end)
 -- Git Checkout/Change Branch
